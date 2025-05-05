@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grocery Store Survey Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Grocery Store Survey Dashboard</h1>
+  </div>
+
+  <div class="filter">
+    <label for="genderFilter">Filter by Gender:</label>
+    <select id="genderFilter"><option value="All">All</option></select>
+    <label for="paymentFilter" style="margin-left:20px;">Filter by Payment Method:</label>
+    <select id="paymentFilter"><option value="All">All</option></select>
+    <label for="chainFilter" style="margin-left:20px;">Filter by Chain:</label>
+    <select id="chainFilter"><option value="All">All</option></select>
+  </div>
+
+  <div class="charts-row">
+    <div class="chart" id="barChart"></div>
+    <div class="chart" id="pieChart">
+      <div class="zoomButtons">
+        <button onclick="zoomInPieChart()">Zoom In</button>
+        <button onclick="zoomOutPieChart()">Zoom Out</button>
+      </div>
+    </div>
+    <div class="chart" id="boxPlot"></div> <!-- Box plot for visualization -->
+  </div>
+
+  <button class="resetButton" onclick="resetFilters()">Reset Filters</button>
+
+  <div class="footer">
+    Created by Harshitha Patlolla, Varun Sai Arutla, Lakshmi Mattaparthi, Sushanth Malliboina
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
